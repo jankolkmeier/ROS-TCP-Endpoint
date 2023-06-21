@@ -43,7 +43,7 @@ class RosSubscriber(RosReceiver):
         self.tcp_server = tcp_server
         self.queue_size = queue_size
 
-        qos_profile = QoSProfile(depth=queue_size, reliability=ReliabilityPolicy.BEST_EFFORT)
+        qos_profile = QoSProfile(depth=queue_size, reliability=ReliabilityPolicy.RELIABLE)
         #qos_profile = QoSPresetProfiles.SENSOR_DATA.value
 
         # Start Subscriber listener function
